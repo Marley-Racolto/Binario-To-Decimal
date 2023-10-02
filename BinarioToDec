@@ -1,0 +1,17 @@
+class Program
+{
+static string Dec2Bin(int n)
+{
+if (n <= 0) return " ";
+int num = n % 2;
+return Dec2Bin( n / 2 ) + num;
+}
+static void Main(string[] args)
+{
+int n;
+Console.WriteLine("Digite um valor decimal: ");
+n = int.Parse(Console.ReadLine());
+string result = Dec2Bin(n);
+Console.WriteLine("o valor binário é: " + result);
+}
+}
